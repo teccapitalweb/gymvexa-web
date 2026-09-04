@@ -43,7 +43,6 @@ export default function Home() {
           <a href="#producto">Producto</a><a href="#funciones">Funciones</a><a href="#planes">Planes</a><a href="#preguntas">Preguntas</a>
         </nav>
         <div className="nav-actions">
-          <a href={loginUrl} className="login-link">Iniciar sesión</a>
           <a href={downloadUrl} className="nav-cta"><CloudDownload /> Descargar</a>
         </div>
       </header>
