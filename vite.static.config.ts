@@ -7,7 +7,7 @@ import { defineConfig } from 'vite';
 const root = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  base: '/gymvexa-web/',
+  base: '/',
   publicDir: path.resolve(root, 'public'),
   plugins: [react()],
   css: { postcss: { plugins: [tailwindcss()] } },
