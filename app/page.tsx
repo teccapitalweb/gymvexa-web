@@ -3,13 +3,14 @@
 import Image from 'next/image';
 import {
   ArrowRight, BadgeCheck, BarChart3, BellRing, Boxes, Check,
-  ChevronRight, CircleDollarSign, CloudDownload, Fingerprint,
+  CircleDollarSign, CloudDownload, Fingerprint,
   LockKeyhole, MonitorCheck, ShieldCheck, Sparkles, Users, WifiOff,
 } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const registerUrl = 'https://gymteck.vercel.app/registro';
 const loginUrl = 'https://gymteck.vercel.app/login';
+const downloadUrl = 'https://github.com/teccapitalweb/gymvexa-downloads/releases/download/v0.1.0-pilot/Gymvexa-Setup-0.1.0.exe';
 
 const features = [
   [Fingerprint, 'ACCESOS', 'La recepción fluye sola', 'Reconocimiento con huella, entrada y salida automáticas, avisos visuales y bienvenida por voz sin detener la operación.', 'cyan'],
@@ -43,7 +44,7 @@ export default function Home() {
         </nav>
         <div className="nav-actions">
           <a href={loginUrl} className="login-link">Iniciar sesión</a>
-          <a href="#planes" className="nav-cta">Conocer planes <ArrowRight /></a>
+          <a href={downloadUrl} className="nav-cta"><CloudDownload /> Descargar</a>
         </div>
       </header>
 
@@ -54,11 +55,12 @@ export default function Home() {
           <h1>Tu gimnasio en orden.<br /><span>Tu equipo en movimiento.</span></h1>
           <p className="hero-lead">Gymvexa reúne socios, accesos, membresías, caja e inventario en un programa rápido, elegante y preparado para trabajar en recepción.</p>
           <div className="hero-actions">
-            <a href={registerUrl} className="primary-cta">Comenzar 14 días gratis <ArrowRight /></a>
-            <a href="#producto" className="secondary-cta">Ver cómo funciona <ChevronRight /></a>
+            <a href={downloadUrl} className="primary-cta"><CloudDownload /> Descargar para Windows</a>
+            <a href={registerUrl} className="secondary-cta">Comenzar 14 días gratis <ArrowRight /></a>
           </div>
+          <p className="download-note">Versión piloto 0.1.0 · Windows 10 y 11 · Instalador completo</p>
           <div className="trust-row">
-            <span><MonitorCheck /> Aplicación de escritorio</span><span><WifiOff /> Hasta 7 días sin internet</span><span><ShieldCheck /> Datos protegidos localmente</span>
+            <span><MonitorCheck /> Aplicación de escritorio</span><span><WifiOff /> Hasta 30 días sin internet</span><span><ShieldCheck /> Datos protegidos localmente</span>
           </div>
         </div>
 
@@ -109,7 +111,7 @@ export default function Home() {
       <section id="preguntas" className="content-section faq-section">
         <div className="faq-heading"><span className="section-kicker">ANTES DE EMPEZAR</span><h2>Preguntas frecuentes.</h2><p>Lo importante, explicado sin letra pequeña.</p></div>
         <Accordion className="faq-list">
-          <AccordionItem value="item-1"><AccordionTrigger>¿Gymvexa funciona sin internet?</AccordionTrigger><AccordionContent>Sí. La operación cotidiana es local y puede continuar hasta siete días sin conexión. Internet se utiliza para validar la licencia y recibir actualizaciones.</AccordionContent></AccordionItem>
+          <AccordionItem value="item-1"><AccordionTrigger>¿Gymvexa funciona sin internet?</AccordionTrigger><AccordionContent>Sí. La operación cotidiana es local y puede continuar hasta 30 días sin conexión. Internet se utiliza para validar la licencia y recibir actualizaciones.</AccordionContent></AccordionItem>
           <AccordionItem value="item-2"><AccordionTrigger>¿Necesito comprar un lector de huellas?</AccordionTrigger><AccordionContent>No es obligatorio. Puedes registrar asistencias por nombre o teléfono. Si deseas biometría, Gymvexa está preparado para el lector ZKTeco ZK9500.</AccordionContent></AccordionItem>
           <AccordionItem value="item-3"><AccordionTrigger>¿Qué ocurre después de pagar?</AccordionTrigger><AccordionContent>Recibirás tu clave y la descarga para Windows. Al abrir Gymvexa, un asistente te ayudará a configurar el gimnasio, el dueño y los planes.</AccordionContent></AccordionItem>
           <AccordionItem value="item-4"><AccordionTrigger>¿Las actualizaciones borran mis datos?</AccordionTrigger><AccordionContent>No. Antes de instalar una versión nueva, Gymvexa crea un respaldo. El instalador reemplaza el programa, no la base operativa.</AccordionContent></AccordionItem>
@@ -117,7 +119,7 @@ export default function Home() {
         </Accordion>
       </section>
 
-      <section className="final-cta-section"><div className="final-glow" /><Image src="/gymvexa-icon.svg" alt="" width={58} height={58} /><span className="section-kicker light">TU GIMNASIO, MEJOR OPERADO</span><h2>Haz que cada día cuente.</h2><p>Prueba Gymvexa durante 14 días y descubre una forma más clara de llevar tu gimnasio.</p><div><a href={registerUrl} className="primary-cta inverse">Crear mi gimnasio <ArrowRight /></a><a href={loginUrl} className="text-cta">Ya tengo una cuenta</a></div><small>Sin tarjeta para comenzar · Configuración guiada · Soporte en español</small></section>
+      <section className="final-cta-section"><div className="final-glow" /><Image src="/gymvexa-icon.svg" alt="" width={58} height={58} /><span className="section-kicker light">TU GIMNASIO, MEJOR OPERADO</span><h2>Haz que cada día cuente.</h2><p>Descarga Gymvexa para Windows y descubre una forma más clara de llevar tu gimnasio.</p><div><a href={downloadUrl} className="primary-cta inverse"><CloudDownload /> Descargar Gymvexa</a><a href={registerUrl} className="text-cta">Crear mi cuenta</a></div><small>Versión piloto para Windows · Configuración guiada · Soporte en español</small></section>
 
       <footer><a href="#inicio" className="brand footer-brand"><span className="brand-mark"><Image src="/gymvexa-icon.svg" alt="" width={34} height={34} /></span><span className="brand-name">Gym<span>vexa</span></span></a><p>Software de gestión para gimnasios, creado por TEC Capital.</p><div><a href="#funciones">Funciones</a><a href="#planes">Planes</a><a href="#preguntas">Preguntas</a><a href={loginUrl}>Acceso</a></div><small>© 2026 Gymvexa. Todos los derechos reservados.</small></footer>
     </main>
