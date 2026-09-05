@@ -1,10 +1,12 @@
 'use client';
 
 import Image from 'next/image';
+import { Fragment } from 'react';
 import {
-  ArrowRight, BadgeCheck, BarChart3, BellRing, Boxes, Check,
-  CircleDollarSign, CloudDownload, Fingerprint,
-  LockKeyhole, MonitorCheck, ShieldCheck, Sparkles, Users, WifiOff,
+  ArrowRight, BadgeCheck, BarChart3, BellRing, Boxes, Cable, Calculator,
+  Check, CircleDollarSign, CloudDownload, Cpu, Fingerprint, Keyboard,
+  LockKeyhole, Mail, MessageCircle, Monitor, MonitorCheck, Mouse,
+  ShieldCheck, Users, WifiOff,
 } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
@@ -19,17 +21,35 @@ const features = [
   [BarChart3, 'DECISIONES', 'El gimnasio habla con datos', 'Reportes, alertas de renovación, inventario bajo y seguimiento inteligente para actuar a tiempo.', 'blue'],
 ] as const;
 
-const plans = [
-  { name: 'Mensual', price: '$300', period: 'MXN / mes', note: 'Flexibilidad total, sin plazo largo.' },
-  { name: 'Trimestral', price: '$900', period: 'MXN / 3 meses', note: 'Un solo cobro cada tres meses.' },
-  { name: 'Anual', price: '$3,000', period: 'MXN / año', note: 'La mejor elección para trabajar todo el año.', featured: true, badge: '2 MESES GRATIS' },
+const pvPlans: { key: string; name: string; price: string; period: string; tag: string; cta: string; featured?: boolean; badge?: string }[] = [
+  { key: 'mensual', name: 'Mensual', price: '$300', period: 'MXN / mes', tag: 'Flexible, sin plazos.', cta: 'Elegir Mensual' },
+  { key: 'anual', name: 'Anual', price: '$2,350', period: 'MXN / año', tag: 'Ahorras $1,250 al año.', cta: 'Elegir Anual', featured: true, badge: 'RECOMENDADO' },
+  { key: 'devida', name: 'De por vida', price: '$3,600', period: 'MXN pago único', tag: 'Una sola inversión, para siempre.', cta: 'Elegir De por vida' },
 ];
 
-const included = [
-  'Socios y membresías ilimitados', 'Asistencia escrita y con huella',
-  'Ventas, caja, gastos e inventario', 'Reportes, perfiles y permisos',
-  'Actualizaciones oficiales incluidas', 'Voz de bienvenida sin conexión',
+const pvFeatures = [
+  'Acceso al sistema Gymvexa',
+  'Socios y membresías ilimitados',
+  'Control de asistencias',
+  'Acceso con huella digital',
+  'Ventas, caja, gastos e inventario',
+  'Reportes, perfiles y permisos',
+  'Actualizaciones oficiales',
+  'Soporte y configuración inicial',
+  'Página web para el gimnasio',
+  'Recordatorios por WhatsApp',
+  'Recordatorios por correo electrónico',
 ];
+
+const pvKit = [
+  [Cpu, 'Computadora'],
+  [Monitor, 'Monitor'],
+  [Keyboard, 'Teclado'],
+  [Mouse, 'Mouse'],
+  [Calculator, 'Caja registradora'],
+  [Fingerprint, 'Lector de huella'],
+  [Cable, 'Otros accesorios'],
+] as const;
 
 export default function Home() {
   return (
@@ -102,9 +122,77 @@ export default function Home() {
       <section className="content-section protection-section"><div className="protection-card"><div className="protection-icon"><LockKeyhole /></div><span className="section-kicker">TRANQUILIDAD OPERATIVA</span><h2>Tu información se queda contigo.</h2><p>Respaldos automáticos, permisos por empleado, bitácora de acciones y validación segura de actualizaciones para proteger la continuidad del gimnasio.</p><div className="security-tags"><span><ShieldCheck /> Firma digital</span><span><CloudDownload /> Actualizador seguro</span><span><BellRing /> Alertas accionables</span></div></div></section>
 
       <section id="planes" className="pricing-section">
-        <div className="pricing-heading"><span className="section-kicker">UN PLAN. TODO INCLUIDO.</span><h2>Empieza sin complicarte.</h2><p>Elige cómo pagar. Todas las modalidades incluyen las mismas herramientas y futuras actualizaciones.</p></div>
-        <div className="pricing-grid">{plans.map((plan) => <article key={plan.name} className={`price-card ${plan.featured ? 'featured' : ''}`}>{plan.badge && <span className="price-badge"><Sparkles /> {plan.badge}</span>}<h3>{plan.name}</h3><div className="price"><strong>{plan.price}</strong><span>{plan.period}</span></div><p>{plan.note}</p><a href={registerUrl}>{plan.featured ? 'Elegir anual' : `Elegir ${plan.name.toLowerCase()}`} <ArrowRight /></a></article>)}</div>
-        <div className="included-card"><div><strong>Todo lo que necesita tu gimnasio</strong><span>Sin módulos escondidos ni cargos por función.</span></div><ul>{included.map((item) => <li key={item}><Check /> {item}</li>)}</ul></div>
+        <div className="pv-head">
+          <span className="pv-brand-badge"><Image src="/gymvexa-icon.svg" alt="" width={24} height={24} /><span>LICENCIA DEL SOFTWARE</span></span>
+          <h2>Planes Gymvexa</h2>
+          <p className="pv-sub">Elige la modalidad que mejor se adapta a tu gimnasio.</p>
+          <p className="pv-support">Una sola plataforma para administrar tu gimnasio con orden, control y seguimiento.</p>
+        </div>
+
+        <div className="pv-grid">
+          <div className="pv-hl" aria-hidden="true" />
+          <div className="pv-corner"><strong>Compara las modalidades</strong><span>Elijas la que elijas, tienes el sistema completo.</span></div>
+          {pvPlans.map((p) => (
+            <div key={p.key} className={`pv-planhead ${p.featured ? 'is-featured' : ''}`}>
+              {p.badge && <span className="pv-badge">{p.badge}</span>}
+              <h3>{p.name}</h3>
+              <div className="pv-price"><strong>{p.price}</strong><span>{p.period}</span></div>
+              <p className="pv-tag">{p.tag}</p>
+              <a href={registerUrl} className="pv-cta">{p.cta} <ArrowRight /></a>
+            </div>
+          ))}
+          {pvFeatures.map((f) => (
+            <Fragment key={f}>
+              <div className="pv-label">{f}</div>
+              <div className="pv-check"><Check /></div>
+              <div className="pv-check is-featured"><Check /></div>
+              <div className="pv-check"><Check /></div>
+            </Fragment>
+          ))}
+        </div>
+
+        <div className="pv-cards">
+          {pvPlans.map((p) => (
+            <article key={p.key} className={`pv-card ${p.featured ? 'is-featured' : ''}`}>
+              {p.badge && <span className="pv-badge">{p.badge}</span>}
+              <h3>{p.name}</h3>
+              <div className="pv-price"><strong>{p.price}</strong><span>{p.period}</span></div>
+              <p className="pv-tag">{p.tag}</p>
+              <ul>{pvFeatures.map((f) => <li key={f}><Check /> {f}</li>)}</ul>
+              <a href={registerUrl} className="pv-cta">{p.cta} <ArrowRight /></a>
+            </article>
+          ))}
+        </div>
+
+        <div className="pv-reminders">
+          <div>
+            <span className="pv-mini-kicker"><BellRing /> INCLUIDO EN TODOS LOS PLANES</span>
+            <h3>Automatización de recordatorios</h3>
+            <p>Gymvexa envía avisos automáticos para que ningún socio se te escape: recordatorios de membresías próximas a vencer y seguimiento a quienes dejaron de asistir o no renovaron.</p>
+            <div className="pv-channels"><span><MessageCircle /> WhatsApp</span><span><Mail /> Correo electrónico</span></div>
+          </div>
+          <div className="pv-rem-visual">
+            <div className="pv-notif"><span className="pv-notif-ico"><MessageCircle /></span><div><strong>Membresía por vencer</strong><small>Hola Carlos, tu plan vence en 3 días. Renueva y no pierdas tu acceso.</small></div></div>
+            <div className="pv-notif"><span className="pv-notif-ico mail"><Mail /></span><div><strong>Te extrañamos en el gym</strong><small>No te vemos hace 2 semanas. Vuelve y retoma tu rutina cuando quieras.</small></div></div>
+          </div>
+        </div>
+
+        <div className="pv-addons">
+          <div className="pv-addons-head">
+            <span className="pv-mini-kicker alt"><Boxes /> COTIZACIÓN ADICIONAL</span>
+            <h3>Kit y equipo para tu recepción</h3>
+            <p>Opcional y aparte de la licencia. Si tu gimnasio lo necesita, cotizamos e instalamos el equipo completo para dejar tu recepción lista para operar.</p>
+          </div>
+          <div className="pv-kit">
+            {pvKit.map(([Icon, label]) => <span key={label} className="pv-kit-item"><Icon /> {label}</span>)}
+          </div>
+          <p className="pv-addons-note">El equipo físico no forma parte del precio de la licencia. Se cotiza según las necesidades de cada gimnasio.</p>
+        </div>
+
+        <div className="pv-final-cta">
+          <div><strong>¿Listo para ordenar tu gimnasio?</strong><span>Te mostramos Gymvexa funcionando y cotizamos tu implementación.</span></div>
+          <div className="pv-final-actions"><a href={registerUrl} className="pv-cta solid">Cotizar mi implementación <ArrowRight /></a><a href={registerUrl} className="pv-cta ghost">Quiero una demo</a></div>
+        </div>
       </section>
 
       <section id="preguntas" className="content-section faq-section">
