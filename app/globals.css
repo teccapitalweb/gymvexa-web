@@ -801,3 +801,146 @@ footer{max-width:1180px;margin:0 auto;padding:30px 24px 45px;display:grid;grid-t
   .site-classic .hero-copy h1 span{-webkit-text-stroke:0}
   .site-classic footer .brand-premium{margin:0 auto}
 }
+
+/* ===== Gymvexa Nueva · misma identidad Obsidian ===== */
+.site-new .hero-section{min-height:auto;padding:166px 24px 108px}
+.site-new .hero-copy{max-width:980px;margin:0 auto;text-align:center}
+.site-new .hero-copy h1{max-width:980px;margin:34px auto 26px;font-size:clamp(60px,7.4vw,108px);line-height:.91}
+.site-new .hero-lead{max-width:720px;margin-right:auto;margin-left:auto;font-size:18px}
+.site-new .hero-actions,.site-new .trust-row{justify-content:center}
+.site-new .download-note{margin-right:auto;margin-left:auto}
+.site-new .product-stage{width:min(1260px,100%);margin:78px auto 0;transform:none}
+.site-new .window-shell{border-radius:9px}
+.site-new .feature-grid{width:min(1120px,100%);grid-template-columns:repeat(2,1fr);gap:1px;border:1px solid #cececa;background:#cececa}
+.site-new .feature-grid .feature-card{min-height:320px}
+.site-new footer .brand-premium{width:auto}
+
+@media(max-width:900px){
+  .site-new .hero-section{padding-top:154px}
+  .site-new .feature-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .site-new .hero-section{padding:132px 16px 76px}
+  .site-new .hero-copy h1{font-size:50px}
+  .site-new .hero-lead{font-size:16px}
+  .site-new .product-stage{margin-top:54px}
+  .site-new .feature-grid{grid-template-columns:1fr}
+}
+
+.site-new .feature-grid .feature-card{
+  min-height:320px;
+  padding:34px;
+  border:0;
+  border-radius:0;
+  background:#f7f7f4;
+  box-shadow:none;
+}
+.site-new .flow-row{border-color:rgba(255,255,255,.09);color:#d0d0cd}
+.site-new .flow-row time{color:#858582}
+.site-new .flow-icon{border:1px solid rgba(255,255,255,.1);border-radius:5px;background:#1a1a1a;color:#d1d1cd}
+.site-new .flow-row>svg{color:#d5d5d1}
+
+/* Planes: la misma combinación perla, obsidiana y aluminio. */
+.site-new .pricing-section{
+  padding:132px 24px;
+  border-color:#d0d0cc;
+  background:#ebebe7;
+  color:#111;
+}
+.site-new .pv-brand-badge{
+  padding:7px 13px 7px 8px;
+  border-color:#cfcfcb;
+  border-radius:5px;
+  background:#f8f8f5;
+  box-shadow:none;
+}
+.site-new .pv-brand-badge img{border-radius:0}
+.site-new .pv-brand-badge>span{color:#5b5b58;font:760 10px var(--font-geist-mono);letter-spacing:.16em}
+.site-new .pv-head h2{color:#111;font-size:clamp(44px,5.2vw,72px);font-weight:690}
+.site-new .pv-sub{color:#4f4f4c}
+.site-new .pv-support{color:#747470}
+.site-new .pv-grid{max-width:1180px;margin-top:72px}
+.site-new .pv-hl{
+  margin:-14px 0;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:7px;
+  background:#111;
+  box-shadow:0 28px 65px rgba(0,0,0,.2);
+}
+.site-new .pv-corner strong{color:#171716}
+.site-new .pv-corner>span{color:#747470}
+.site-new .pv-planhead{padding-top:34px;padding-bottom:28px}
+.site-new .pv-planhead h3{color:#60605d}
+.site-new .pv-price strong{color:#111}
+.site-new .pv-price span{color:#777773}
+.site-new .pv-tag{border:1px solid #d2d2ce;border-radius:4px;background:rgba(255,255,255,.45);color:#51514e}
+.site-new .pv-cta{border-color:#c9c9c5;border-radius:6px;background:#f8f8f5;color:#1b1b1a;box-shadow:none}
+.site-new .pv-cta:hover{background:#fff;box-shadow:0 10px 24px rgba(0,0,0,.09)}
+.site-new .pv-planhead.is-featured h3{color:#bdbdb9}
+.site-new .pv-planhead.is-featured .pv-price strong{color:#f3f3ef}
+.site-new .pv-planhead.is-featured .pv-price span{color:#979793}
+.site-new .pv-planhead.is-featured .pv-tag{border-color:rgba(255,255,255,.13);background:#1b1b1b;color:#c4c4c0}
+.site-new .pv-planhead.is-featured .pv-cta{border-color:#ededeb;background:#ededeb;color:#111;box-shadow:none}
+.site-new .pv-planhead.is-featured .pv-cta:hover{background:#fff}
+.site-new .pv-badge{border-radius:4px;background:#d5d5d1;color:#111;box-shadow:none}
+.site-new .pv-label{border-top-color:#cececa;color:#454542}
+.site-new .pv-check{border-top-color:#cececa}
+.site-new .pv-check svg{border-radius:4px;background:#d9d9d5;color:#181817}
+.site-new .pv-check.is-featured{border-top-color:rgba(255,255,255,.1)}
+.site-new .pv-check.is-featured svg{background:#ecece8;color:#111}
+
+.site-new .pv-card{border-color:#cececa;border-radius:7px;background:#f8f8f5;box-shadow:none}
+.site-new .pv-card.is-featured{border-color:#222;border-radius:7px;background:#111;color:#f1f1ed;box-shadow:0 24px 55px rgba(0,0,0,.18)}
+.site-new .pv-card h3{color:#5d5d5a}
+.site-new .pv-card.is-featured h3{color:#bcbcb8}
+.site-new .pv-card .pv-price span{color:#747470}
+.site-new .pv-card.is-featured .pv-price strong{color:#f2f2ee}
+.site-new .pv-card.is-featured .pv-price span{color:#969692}
+.site-new .pv-card.is-featured .pv-tag{border-color:rgba(255,255,255,.13);background:#1b1b1b;color:#c4c4c0}
+.site-new .pv-card ul{border-top-color:#d2d2ce}
+.site-new .pv-card.is-featured ul{border-top-color:rgba(255,255,255,.12)}
+.site-new .pv-card li{color:#4c4c49}
+.site-new .pv-card.is-featured li{color:#cececa}
+.site-new .pv-card li svg{border-radius:4px;background:#ddddda;color:#171716}
+.site-new .pv-card.is-featured li svg{background:#ededeb;color:#111}
+.site-new .pv-card.is-featured .pv-cta{border-color:#ededeb;background:#ededeb;color:#111;box-shadow:none}
+
+.site-new .pv-reminders{
+  gap:52px;
+  margin-top:80px;
+  padding:44px;
+  border-color:#cececa;
+  border-radius:7px;
+  background:#f7f7f4;
+  box-shadow:none;
+}
+.site-new .pv-mini-kicker,.site-new .pv-mini-kicker.alt{color:#5e5e5b}
+.site-new .pv-reminders h3,.site-new .pv-addons h3{color:#171716}
+.site-new .pv-reminders>div>p,.site-new .pv-addons-head p{color:#5d5d5a}
+.site-new .pv-channels span{border-color:#d0d0cc;border-radius:5px;background:#efefeb;color:#333331}
+.site-new .pv-channels svg{color:#555552}
+.site-new .pv-notif{border-color:#d0d0cc;border-radius:5px;background:#efefeb;box-shadow:none}
+.site-new .pv-notif-ico,.site-new .pv-notif-ico.mail{border-radius:4px;background:#1a1a1a;color:#e3e3df}
+.site-new .pv-notif strong{color:#1d1d1b}
+.site-new .pv-notif small{color:#666663}
+
+.site-new .pv-addons{margin-top:14px;padding:44px;border-color:#bdbdb9;border-radius:7px;background:rgba(255,255,255,.2)}
+.site-new .pv-kit-item{border-color:#c9c9c5;border-radius:5px;background:#f7f7f4;color:#42423f;box-shadow:none}
+.site-new .pv-kit-item svg{color:#5b5b58}
+.site-new .pv-addons-note{color:#73736f}
+.site-new .pv-final-cta{margin-top:14px;padding:42px 44px;border:1px solid rgba(255,255,255,.1);border-radius:7px;background:#111;color:#efefeb;box-shadow:0 28px 60px rgba(0,0,0,.18)}
+.site-new .pv-final-cta>div:first-child span{color:#999995}
+.site-new .pv-final-cta .pv-cta.solid{border-color:#ededeb;background:#ededeb;color:#111;box-shadow:none}
+.site-new .pv-final-cta .pv-cta.solid:hover{background:#fff}
+.site-new .pv-final-cta .pv-cta.ghost{border-color:rgba(255,255,255,.22);background:transparent;color:#dededa}
+.site-new .pv-final-cta .pv-cta.ghost:hover{background:rgba(255,255,255,.06)}
+
+@media(max-width:900px){
+  .site-new .pv-cards{max-width:520px}
+}
+@media(max-width:620px){
+  .site-new .feature-grid .feature-card{min-height:270px;padding:28px}
+  .site-new .pricing-section{padding:92px 16px}
+  .site-new .pv-card,.site-new .pv-reminders,.site-new .pv-addons,.site-new .pv-final-cta{border-radius:6px}
+  .site-new .pv-reminders,.site-new .pv-addons,.site-new .pv-final-cta{padding:30px 22px}
+}

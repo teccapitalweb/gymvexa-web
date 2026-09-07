@@ -54,11 +54,11 @@ const pvKit = [
 
 export default function Home() {
   return (
-    <main className="site">
+    <main className="site site-classic site-new">
       <header className="site-nav">
-        <a href="#inicio" className="brand" aria-label="Gymvexa, inicio">
-          <span className="brand-mark"><Image className="official-mark on-light" src="/gymvexa-mark-transparent.png" alt="" width={38} height={38} priority /></span>
-          <span className="brand-name">Gym<span>vexa</span></span>
+        <a href="#inicio" className="brand brand-premium" aria-label="Gymvexa, inicio">
+          <span className="brand-emblem"><Image src="/gymvexa-mark-transparent.png" alt="" width={48} height={44} priority /></span>
+          <span className="brand-wordmark">GYMVEXA</span>
         </a>
         <nav aria-label="Navegación principal" className="nav-links">
           <a href="#producto">Producto</a><a href="#funciones">Funciones</a><a href="#planes">Planes</a><a href="#preguntas">Preguntas</a>
@@ -210,7 +210,7 @@ export default function Home() {
 
       <section className="final-cta-section"><div className="final-glow" /><Image className="official-mark" src="/gymvexa-mark-transparent.png" alt="" width={58} height={58} /><span className="section-kicker light">TU GIMNASIO, MEJOR OPERADO</span><h2>Haz que cada día cuente.</h2><p>Descarga Gymvexa para Windows y descubre una forma más clara de llevar tu gimnasio.</p><div><a href={downloadUrl} className="primary-cta inverse"><CloudDownload /> Descargar Gymvexa</a><a href={registerUrl} className="text-cta">Crear mi cuenta</a></div><small>Versión piloto para Windows · Configuración guiada · Soporte en español</small></section>
 
-      <footer><a href="#inicio" className="brand footer-brand"><span className="brand-mark"><Image className="official-mark on-light" src="/gymvexa-mark-transparent.png" alt="" width={34} height={34} /></span><span className="brand-name">Gym<span>vexa</span></span></a><p>Software de gestión para gimnasios, creado por TEC Capital.</p><div><a href="#funciones">Funciones</a><a href="#planes">Planes</a><a href="#preguntas">Preguntas</a><a href={loginUrl}>Acceso</a></div><small>© 2026 Gymvexa. Todos los derechos reservados.</small></footer>
+      <footer><a href="#inicio" className="brand footer-brand brand-premium"><span className="brand-emblem"><Image src="/gymvexa-mark-transparent.png" alt="" width={48} height={44} /></span><span className="brand-wordmark">GYMVEXA</span></a><p>Software de gestión para gimnasios, creado por TEC Capital.</p><div><a href="#funciones">Funciones</a><a href="#planes">Planes</a><a href="#preguntas">Preguntas</a><a href={loginUrl}>Acceso</a></div><small>© 2026 Gymvexa. Todos los derechos reservados.</small></footer>
     </main>
   );
 }
