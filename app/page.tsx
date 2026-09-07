@@ -131,7 +131,7 @@ export default function Home() {
           <div className="pv-hl" aria-hidden="true" />
           <div className="pv-corner"><strong>Compara las modalidades</strong><span>Elijas la que elijas, tienes el sistema completo.</span></div>
           {pvPlans.map((p) => (
-            <div key={p.key} className={`pv-planhead ${p.featured ? 'is-featured' : ''}`}>
+            <div key={p.key} className={`pv-planhead plan-${p.key} ${p.featured ? 'is-featured' : ''}`}>
               {p.badge && <span className="pv-badge">{p.badge}</span>}
               <h3>{p.name}</h3>
               <div className="pv-price"><strong>{p.price}</strong><span>{p.period}</span></div>

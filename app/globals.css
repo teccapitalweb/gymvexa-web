@@ -881,35 +881,42 @@ footer{max-width:1180px;margin:0 auto;padding:30px 24px 45px;display:grid;grid-t
 .site-new .pv-head h2{color:#111;font-size:clamp(44px,5.2vw,72px);font-weight:690}
 .site-new .pv-sub{color:#4f4f4c}
 .site-new .pv-support{color:#747470}
-.site-new .pv-grid{max-width:1180px;margin-top:72px}
-.site-new .pv-hl{
-  margin:-14px 0;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:7px;
-  background:#111;
-  box-shadow:0 28px 65px rgba(0,0,0,.2);
+.site-new .pv-grid{
+  max-width:1180px;
+  margin-top:72px;
+  padding:18px 18px 12px;
+  border:1px solid #cececa;
+  border-radius:12px;
+  background:rgba(248,248,245,.58);
+  box-shadow:0 28px 70px rgba(23,23,22,.08);
 }
-.site-new .pv-corner strong{color:#171716}
-.site-new .pv-corner>span{color:#747470}
-.site-new .pv-planhead{padding-top:34px;padding-bottom:28px}
+.site-new .pv-hl{display:none}
+.site-new .pv-corner{grid-column:1;grid-row:1;min-height:258px;margin:0 6px 24px;padding:32px 24px;justify-content:center;border:1px solid #d5d5d1;border-radius:9px;background:#efefeb}
+.site-new .pv-corner strong{color:#171716;font-size:17px}
+.site-new .pv-corner>span{max-width:210px;color:#686865;font-size:12px}
+.site-new .pv-planhead{min-height:258px;margin:0 6px 24px;padding:34px 22px 28px;border:1px solid #d3d3cf;border-radius:9px;background:#f8f8f5}
+.site-new .pv-planhead.plan-mensual{grid-column:2;grid-row:1}
+.site-new .pv-planhead.plan-anual{grid-column:3;grid-row:1}
+.site-new .pv-planhead.plan-devida{grid-column:4;grid-row:1}
 .site-new .pv-planhead h3{color:#60605d}
 .site-new .pv-price strong{color:#111}
 .site-new .pv-price span{color:#777773}
 .site-new .pv-tag{border:1px solid #d2d2ce;border-radius:4px;background:rgba(255,255,255,.45);color:#51514e}
 .site-new .pv-cta{border-color:#c9c9c5;border-radius:6px;background:#f8f8f5;color:#1b1b1a;box-shadow:none}
 .site-new .pv-cta:hover{background:#fff;box-shadow:0 10px 24px rgba(0,0,0,.09)}
-.site-new .pv-planhead.is-featured h3{color:#bdbdb9}
-.site-new .pv-planhead.is-featured .pv-price strong{color:#f3f3ef}
-.site-new .pv-planhead.is-featured .pv-price span{color:#979793}
-.site-new .pv-planhead.is-featured .pv-tag{border-color:rgba(255,255,255,.13);background:#1b1b1b;color:#c4c4c0}
+.site-new .pv-planhead.is-featured{border-color:#363633;background:linear-gradient(155deg,#2b2b29,#181817);box-shadow:0 22px 42px rgba(0,0,0,.18)}
+.site-new .pv-planhead.is-featured h3{color:#d7d7d3}
+.site-new .pv-planhead.is-featured .pv-price strong{color:#fff}
+.site-new .pv-planhead.is-featured .pv-price span{color:#c2c2be}
+.site-new .pv-planhead.is-featured .pv-tag{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:#e0e0dc}
 .site-new .pv-planhead.is-featured .pv-cta{border-color:#ededeb;background:#ededeb;color:#111;box-shadow:none}
 .site-new .pv-planhead.is-featured .pv-cta:hover{background:#fff}
-.site-new .pv-badge{border-radius:4px;background:#d5d5d1;color:#111;box-shadow:none}
-.site-new .pv-label{border-top-color:#cececa;color:#454542}
-.site-new .pv-check{border-top-color:#cececa}
+.site-new .pv-badge{top:-12px;border:1px solid #bdbdb9;border-radius:4px;background:#dededa;color:#111;box-shadow:0 8px 20px rgba(0,0,0,.1)}
+.site-new .pv-label{min-height:56px;padding-left:18px;border-top-color:#cececa;color:#454542}
+.site-new .pv-check{min-height:56px;border-top-color:#cececa}
 .site-new .pv-check svg{border-radius:4px;background:#d9d9d5;color:#181817}
-.site-new .pv-check.is-featured{border-top-color:rgba(255,255,255,.1)}
-.site-new .pv-check.is-featured svg{background:#ecece8;color:#111}
+.site-new .pv-check.is-featured{border-top-color:#cececa;background:#e5e5e1}
+.site-new .pv-check.is-featured svg{background:#2b2b29;color:#f4f4f0}
 
 .site-new .pv-card{border-color:#cececa;border-radius:7px;background:#f8f8f5;box-shadow:none}
 .site-new .pv-card.is-featured{border-color:#222;border-radius:7px;background:#111;color:#f1f1ed;box-shadow:0 24px 55px rgba(0,0,0,.18)}
