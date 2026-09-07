@@ -808,27 +808,44 @@ footer{max-width:1180px;margin:0 auto;padding:30px 24px 45px;display:grid;grid-t
 }
 
 /* ===== Gymvexa Nueva · misma identidad Obsidian ===== */
-.site-new .hero-section{min-height:auto;padding:166px 24px 108px}
-.site-new .hero-copy{max-width:980px;margin:0 auto;text-align:center}
-.site-new .hero-copy h1{max-width:980px;margin:34px auto 26px;font-size:clamp(60px,7.4vw,108px);line-height:.91}
-.site-new .hero-lead{max-width:720px;margin-right:auto;margin-left:auto;font-size:18px}
-.site-new .hero-actions,.site-new .trust-row{justify-content:center}
-.site-new .download-note{margin-right:auto;margin-left:auto}
-.site-new .product-stage{width:min(1260px,100%);margin:78px auto 0;transform:none}
+.site-new .hero-section{min-height:900px;padding:122px 30px 82px;display:flex;align-items:center}
+.site-new .new-hero-layout{position:relative;z-index:3;display:grid;grid-template-columns:minmax(420px,.84fr) minmax(590px,1.16fr);align-items:center;gap:68px;width:min(1500px,100%);margin:0 auto}
+.site-new .hero-copy{max-width:650px;margin:0;text-align:left}
+.site-new .hero-copy h1{max-width:650px;margin:28px 0 24px;font-size:clamp(62px,5.3vw,90px);line-height:.92}
+.site-new .hero-lead{max-width:610px;margin:0;font-size:17px}
+.site-new .hero-actions,.site-new .trust-row{justify-content:flex-start}
+.site-new .download-note{margin-right:0;margin-left:0}
+.site-new .product-stage{width:116%;max-width:none;margin:0 -16% 0 0;transform:perspective(1800px) rotateY(-3deg) rotateX(1deg);transform-origin:center right}
+.site-new .product-stage:after{content:"";position:absolute;z-index:-2;inset:-42px -34px;border:1px solid rgba(255,255,255,.055);background:linear-gradient(145deg,rgba(255,255,255,.035),transparent 55%);pointer-events:none}
 .site-new .window-shell{border-radius:9px}
 .site-new .feature-grid{width:min(1120px,100%);grid-template-columns:repeat(2,1fr);gap:1px;border:1px solid #cececa;background:#cececa}
 .site-new .feature-grid .feature-card{min-height:320px}
 .site-new footer .brand-premium{width:auto}
 
-@media(max-width:900px){
+@media(max-width:1240px){
+  .site-new .new-hero-layout{grid-template-columns:minmax(390px,.84fr) minmax(520px,1.16fr);gap:42px}
+  .site-new .hero-copy h1{font-size:clamp(58px,5.8vw,76px)}
+}
+@media(max-width:1020px){
   .site-new .hero-section{padding-top:154px}
+  .site-new .new-hero-layout{grid-template-columns:1fr;gap:64px}
+  .site-new .hero-copy{max-width:820px;margin:0 auto;text-align:center}
+  .site-new .hero-copy h1{max-width:850px;margin-right:auto;margin-left:auto}
+  .site-new .hero-lead{margin-right:auto;margin-left:auto}
+  .site-new .hero-actions,.site-new .trust-row{justify-content:center}
+  .site-new .download-note{margin-right:auto;margin-left:auto}
+  .site-new .product-stage{width:100%;margin:0;transform:none}
+  .site-new .product-stage:after{inset:-28px -22px}
+}
+@media(max-width:900px){
   .site-new .feature-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:620px){
   .site-new .hero-section{padding:132px 16px 76px}
+  .site-new .new-hero-layout{gap:52px}
   .site-new .hero-copy h1{font-size:50px}
   .site-new .hero-lead{font-size:16px}
-  .site-new .product-stage{margin-top:54px}
+  .site-new .product-stage:after{inset:-16px -10px}
   .site-new .feature-grid{grid-template-columns:1fr}
 }
 

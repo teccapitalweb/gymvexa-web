@@ -65,28 +65,30 @@ export default function Home() {
 
       <section id="inicio" className="hero-section">
         <div className="hero-orb hero-orb-one" /><div className="hero-orb hero-orb-two" /><div className="hero-grid" />
-        <div className="hero-copy">
-          <div className="eyebrow-pill"><span className="pulse-dot" /> GESTIÓN NATIVA PARA WINDOWS</div>
-          <h1>Tu gimnasio en orden.<br /><span>Tu equipo en movimiento.</span></h1>
-          <p className="hero-lead">Gymvexa reúne socios, accesos, membresías, caja e inventario en un programa rápido, elegante y preparado para trabajar en recepción.</p>
-          <div className="hero-actions">
-            <a href={downloadUrl} className="primary-cta"><CloudDownload /> Descargar para Windows</a>
-            <a href={registerUrl} className="secondary-cta">Comenzar 14 días gratis <ArrowRight /></a>
+        <div className="new-hero-layout">
+          <div className="hero-copy">
+            <div className="eyebrow-pill"><span className="pulse-dot" /> GESTIÓN NATIVA PARA WINDOWS</div>
+            <h1>Tu gimnasio en orden.<br /><span>Tu equipo en movimiento.</span></h1>
+            <p className="hero-lead">Gymvexa reúne socios, accesos, membresías, caja e inventario en un programa rápido, elegante y preparado para trabajar en recepción.</p>
+            <div className="hero-actions">
+              <a href={downloadUrl} className="primary-cta"><CloudDownload /> Descargar para Windows</a>
+              <a href={registerUrl} className="secondary-cta">Comenzar 14 días gratis <ArrowRight /></a>
+            </div>
+            <p className="download-note">Versión piloto 0.1.0 · Windows 10 y 11 · Instalador completo</p>
+            <div className="trust-row">
+              <span><MonitorCheck /> Aplicación de escritorio</span><span><WifiOff /> Hasta 30 días sin internet</span><span><ShieldCheck /> Datos protegidos localmente</span>
+            </div>
           </div>
-          <p className="download-note">Versión piloto 0.1.0 · Windows 10 y 11 · Instalador completo</p>
-          <div className="trust-row">
-            <span><MonitorCheck /> Aplicación de escritorio</span><span><WifiOff /> Hasta 30 días sin internet</span><span><ShieldCheck /> Datos protegidos localmente</span>
-          </div>
-        </div>
 
-        <div id="producto" className="product-stage">
-          <div className="stage-glow" />
-          <div className="window-shell">
-            <div className="window-bar"><div className="window-dots"><i /><i /><i /></div><span>Gymvexa · Centro de operación</span><div className="window-status"><span /> Sistema listo</div></div>
-            <div className="window-image"><Image src="/gymvexa-dashboard.png" alt="Panel principal de Gymvexa mostrando socios, asistencias y alertas" width={1920} height={1035} priority /></div>
+          <div id="producto" className="product-stage">
+            <div className="stage-glow" />
+            <div className="window-shell">
+              <div className="window-bar"><div className="window-dots"><i /><i /><i /></div><span>Gymvexa · Centro de operación</span><div className="window-status"><span /> Sistema listo</div></div>
+              <div className="window-image"><Image src="/gymvexa-dashboard.png" alt="Panel principal de Gymvexa mostrando socios, asistencias y alertas" width={1920} height={1035} priority /></div>
+            </div>
+            <div className="floating-card floating-access"><span className="floating-icon"><Fingerprint /></span><div><strong>Entrada registrada</strong><small>Bienvenida, Ana</small></div><BadgeCheck /></div>
+            <div className="floating-card floating-update"><span className="floating-icon"><CloudDownload /></span><div><strong>Siempre al día</strong><small>Actualizaciones seguras</small></div></div>
           </div>
-          <div className="floating-card floating-access"><span className="floating-icon"><Fingerprint /></span><div><strong>Entrada registrada</strong><small>Bienvenida, Ana</small></div><BadgeCheck /></div>
-          <div className="floating-card floating-update"><span className="floating-icon"><CloudDownload /></span><div><strong>Siempre al día</strong><small>Actualizaciones seguras</small></div></div>
         </div>
       </section>
 
