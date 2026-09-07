@@ -597,7 +597,7 @@ footer{max-width:1180px;margin:0 auto;padding:30px 24px 45px;display:grid;grid-t
   background:#0c0c0c;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.035);
 }
-.site-classic .version-switch a{gap:7px;height:40px;padding:0 12px;border-radius:5px;color:#747471;font-size:10px;letter-spacing:.045em}
+.site-classic .version-switch a{gap:0;height:40px;padding:0 18px;border-radius:5px;color:#747471;font-size:10px;letter-spacing:.045em}
 .site-classic .version-switch a:hover{background:#171716;color:#d5d5d1}
 .site-classic .version-switch a.is-active{
   border-color:#5d5d59;
@@ -933,6 +933,8 @@ footer{max-width:1180px;margin:0 auto;padding:30px 24px 45px;display:grid;grid-t
 .site-new .pv-kit-item{border-color:#c9c9c5;border-radius:5px;background:#f7f7f4;color:#42423f;box-shadow:none}
 .site-new .pv-kit-item svg{color:#5b5b58}
 .site-new .pv-addons-note{color:#73736f}
+.site-new .pv-service-note{margin:18px 0 0;padding-top:16px;border-top:1px solid #d0d0cc;color:#6b6b67;font-size:12px;font-weight:620;letter-spacing:.015em}
+.site-new .pv-commercial-note{max-width:1180px;margin:18px auto 0;color:#696965;font-size:11px;line-height:1.6;text-align:center}
 .site-new .pv-final-cta{margin-top:14px;padding:42px 44px;border:1px solid rgba(255,255,255,.1);border-radius:7px;background:#111;color:#efefeb;box-shadow:0 28px 60px rgba(0,0,0,.18)}
 .site-new .pv-final-cta>div:first-child span{color:#999995}
 .site-new .pv-final-cta .pv-cta.solid{border-color:#ededeb;background:#ededeb;color:#111;box-shadow:none}

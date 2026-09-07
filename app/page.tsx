@@ -5,7 +5,7 @@ import { Fragment } from 'react';
 import {
   ArrowRight, BadgeCheck, BarChart3, BellRing, Boxes, Cable, Calculator,
   Check, CircleDollarSign, CloudDownload, Cpu, Fingerprint, Keyboard,
-  LockKeyhole, Mail, MessageCircle, Monitor, MonitorCheck, Mouse,
+  LockKeyhole, Mail, MessageCircle, Monitor, MonitorCheck,
   ShieldCheck, Users, WifiOff,
 } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -23,33 +23,27 @@ const features = [
 ] as const;
 
 const pvPlans: { key: string; name: string; price: string; period: string; tag: string; cta: string; featured?: boolean; badge?: string }[] = [
-  { key: 'mensual', name: 'Mensual', price: '$300', period: 'MXN / mes', tag: 'Flexible, sin plazos.', cta: 'Elegir Mensual' },
-  { key: 'anual', name: 'Anual', price: '$2,350', period: 'MXN / año', tag: 'Ahorras $1,250 al año.', cta: 'Elegir Anual', featured: true, badge: 'RECOMENDADO' },
-  { key: 'devida', name: 'De por vida', price: '$3,600', period: 'MXN pago único', tag: 'Una sola inversión, para siempre.', cta: 'Elegir De por vida' },
+  { key: 'mensual', name: 'Mensual', price: '$300', period: 'MXN / mes', tag: 'Flexibilidad.', cta: 'Elegir Mensual' },
+  { key: 'anual', name: 'Anual', price: '$2,350', period: 'MXN / año', tag: 'Ahorra $1,250.', cta: 'Elegir Anual', featured: true, badge: 'MÁS CONVENIENTE' },
+  { key: 'devida', name: 'De por vida', price: '$3,600', period: 'MXN único', tag: 'Sin renovaciones.', cta: 'Elegir De por vida' },
 ];
 
 const pvFeatures = [
-  'Acceso al sistema Gymvexa',
-  'Socios y membresías ilimitados',
+  'Software Gymvexa completo',
+  'Gestión de socios y membresías',
   'Control de asistencias',
-  'Acceso con huella digital',
-  'Ventas, caja, gastos e inventario',
-  'Reportes, perfiles y permisos',
-  'Actualizaciones oficiales',
-  'Soporte y configuración inicial',
+  'Pagos y renovaciones',
   'Página web para el gimnasio',
-  'Recordatorios por WhatsApp',
-  'Recordatorios por correo electrónico',
+  'Panel administrativo',
 ];
 
 const pvKit = [
   [Cpu, 'Computadora'],
   [Monitor, 'Monitor'],
-  [Keyboard, 'Teclado'],
-  [Mouse, 'Mouse'],
+  [Keyboard, 'Teclado y mouse'],
   [Calculator, 'Caja registradora'],
-  [Fingerprint, 'Lector de huella'],
-  [Cable, 'Otros accesorios'],
+  [Fingerprint, 'Lector de huella digital'],
+  [Cable, 'Configuración / instalación'],
 ] as const;
 
 export default function Home() {
@@ -128,7 +122,7 @@ export default function Home() {
           <span className="pv-brand-badge"><Image className="official-mark on-light" src="/gymvexa-mark-transparent.png" alt="" width={24} height={24} /><span>LICENCIA DEL SOFTWARE</span></span>
           <h2>Planes Gymvexa</h2>
           <p className="pv-sub">Elige la modalidad que mejor se adapta a tu gimnasio.</p>
-          <p className="pv-support">Una sola plataforma para administrar tu gimnasio con orden, control y seguimiento.</p>
+          <p className="pv-support">El mismo software completo en las tres modalidades. Solo cambia la forma de pago y la vigencia.</p>
         </div>
 
         <div className="pv-grid">
@@ -168,10 +162,11 @@ export default function Home() {
 
         <div className="pv-reminders">
           <div>
-            <span className="pv-mini-kicker"><BellRing /> INCLUIDO EN TODOS LOS PLANES</span>
-            <h3>Automatización de recordatorios</h3>
-            <p>Gymvexa envía avisos automáticos para que ningún socio se te escape: recordatorios de membresías próximas a vencer y seguimiento a quienes dejaron de asistir o no renovaron.</p>
-            <div className="pv-channels"><span><MessageCircle /> WhatsApp</span><span><Mail /> Correo electrónico</span></div>
+            <span className="pv-mini-kicker"><BellRing /> SERVICIO OPCIONAL · COTIZACIÓN ADICIONAL</span>
+            <h3>Recordatorios y recuperación de socios</h3>
+            <p>Servicio adicional para mantener al socio activo y recuperar clientes inactivos, con avisos de membresías próximas a vencer y seguimiento a quienes dejaron de asistir.</p>
+            <div className="pv-channels"><span><MessageCircle /> WhatsApp</span><span><Mail /> Correo electrónico (Gmail)</span></div>
+            <p className="pv-service-note">No está incluido en la licencia del software. Precio adicional por definir.</p>
           </div>
           <div className="pv-rem-visual">
             <div className="pv-notif"><span className="pv-notif-ico"><MessageCircle /></span><div><strong>Membresía por vencer</strong><small>Hola Carlos, tu plan vence en 3 días. Renueva y no pierdas tu acceso.</small></div></div>
@@ -190,6 +185,8 @@ export default function Home() {
           </div>
           <p className="pv-addons-note">El equipo físico no forma parte del precio de la licencia. Se cotiza según las necesidades de cada gimnasio.</p>
         </div>
+
+        <p className="pv-commercial-note">Precios en MXN. El kit de equipo y el servicio de recordatorios no están incluidos en la licencia del software y se cotizan por separado. Alcances finales sujetos a definición comercial.</p>
 
         <div className="pv-final-cta">
           <div><strong>¿Listo para ordenar tu gimnasio?</strong><span>Te mostramos Gymvexa funcionando y cotizamos tu implementación.</span></div>
