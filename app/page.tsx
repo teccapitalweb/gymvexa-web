@@ -9,6 +9,7 @@ import {
   ShieldCheck, Users, WifiOff,
 } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import VersionSwitch from '@/components/version-switch';
 
 const registerUrl = 'https://gymteck.vercel.app/registro';
 const loginUrl = 'https://gymteck.vercel.app/login';
@@ -63,6 +64,7 @@ export default function Home() {
           <a href="#producto">Producto</a><a href="#funciones">Funciones</a><a href="#planes">Planes</a><a href="#preguntas">Preguntas</a>
         </nav>
         <div className="nav-actions">
+          <VersionSwitch current="nueva" />
           <a href={downloadUrl} className="nav-cta"><CloudDownload /> Descargar</a>
         </div>
       </header>

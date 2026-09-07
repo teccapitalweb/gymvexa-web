@@ -20,6 +20,11 @@ export default defineConfig({
   build: {
     outDir: 'dist-pages',
     emptyOutDir: true,
-    rollupOptions: { input: path.resolve(root, 'index.html') },
+    rollupOptions: {
+      input: {
+        main: path.resolve(root, 'index.html'),
+        clasico: path.resolve(root, 'clasico/index.html'),
+      },
+    },
   },
 });
