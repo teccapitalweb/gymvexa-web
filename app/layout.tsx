@@ -29,6 +29,11 @@ export const metadata: Metadata = {
     description: 'El centro de operación que tu gimnasio necesita.',
     images: ['/og.png'],
   },
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

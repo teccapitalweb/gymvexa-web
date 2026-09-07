@@ -51,11 +51,11 @@ const views = [
 
 export default function Clasico() {
   return (
-    <main className="site">
+    <main className="site site-classic">
       <header className="site-nav">
-        <a href="#inicio" className="brand" aria-label="Gymvexa, inicio">
-          <span className="brand-mark"><Image src="/gymvexa-icon.svg" alt="" width={38} height={38} priority /></span>
-          <span className="brand-name">Gym<span>vexa</span></span>
+        <a href="#inicio" className="brand brand-premium" aria-label="Gymvexa, inicio">
+          <span className="brand-emblem"><Image src="/gymvexa-mark-transparent.png" alt="" width={48} height={44} priority /></span>
+          <span className="brand-wordmark">GYMVEXA</span>
         </a>
         <nav aria-label="Navegación principal" className="nav-links">
           <a href="#problema">Problema</a><a href="#funciones">Funciones</a><a href="#incluye">Qué incluye</a><a href="#preguntas">Preguntas</a>
@@ -68,28 +68,32 @@ export default function Clasico() {
 
       <section id="inicio" className="hero-section">
         <div className="hero-orb hero-orb-one" /><div className="hero-orb hero-orb-two" /><div className="hero-grid" />
-        <div className="hero-copy">
-          <div className="eyebrow-pill"><span className="pulse-dot" /> PLATAFORMA WEB · PANEL, MOSTRADOR Y APP</div>
-          <h1>El software que automatiza tu gimnasio<br /><span>desde un solo panel.</span></h1>
-          <p className="hero-lead">Gestiona accesos, socios, membresías, pagos, caja, inventario y ventas con una plataforma diseñada para gimnasios que buscan operar con más orden, control y eficiencia.</p>
-          <div className="hero-actions">
-            <a href={registerUrl} className="primary-cta">Comenzar gratis <ArrowRight /></a>
-            <a href={waMore} className="secondary-cta">Hablar con ventas <ArrowRight /></a>
+        <div className="cl-hero-rail cl-hero-rail-left" aria-hidden="true"><span>CONTROL</span><i /></div>
+        <div className="cl-hero-rail cl-hero-rail-right" aria-hidden="true"><i /><span>OPERACIÓN 24/7</span></div>
+        <div className="cl-hero-layout">
+          <div className="hero-copy">
+            <div className="eyebrow-pill"><span className="pulse-dot" /> PLATAFORMA WEB · PANEL, MOSTRADOR Y APP</div>
+            <h1>El software que automatiza tu gimnasio<br /><span>desde un solo panel.</span></h1>
+            <p className="hero-lead">Gestiona accesos, socios, membresías, pagos, caja, inventario y ventas con una plataforma diseñada para gimnasios que buscan operar con más orden, control y eficiencia.</p>
+            <div className="hero-actions">
+              <a href={registerUrl} className="primary-cta">Comenzar gratis <ArrowRight /></a>
+              <a href={waMore} className="secondary-cta">Hablar con ventas <ArrowRight /></a>
+            </div>
+            <p className="download-note">Sin tarjeta para empezar · Sin comisión por socio · Listo para gimnasios reales</p>
+            <div className="trust-row">
+              <span><Banknote /> Efectivo</span><span><Store /> OXXO</span><span><CreditCard /> Tarjeta</span><span><ArrowLeftRight /> Transferencia</span><span><Wallet /> Monedero</span>
+            </div>
           </div>
-          <p className="download-note">Sin tarjeta para empezar · Sin comisión por socio · Listo para gimnasios reales</p>
-          <div className="trust-row">
-            <span><Banknote /> Efectivo</span><span><Store /> OXXO</span><span><CreditCard /> Tarjeta</span><span><ArrowLeftRight /> Transferencia</span><span><Wallet /> Monedero</span>
-          </div>
-        </div>
 
-        <div id="producto" className="product-stage">
-          <div className="stage-glow" />
-          <div className="window-shell">
-            <div className="window-bar"><div className="window-dots"><i /><i /><i /></div><span>Gymvexa · Panel del dueño</span><div className="window-status"><span /> En tiempo real</div></div>
-            <div className="window-image"><Image src="/clasico/principal.webp" alt="Panel principal de Gymvexa con accesos, pagos, fiados y caja del día" width={1920} height={1035} priority /></div>
+          <div id="producto" className="product-stage">
+            <div className="stage-glow" />
+            <div className="window-shell">
+              <div className="window-bar"><div className="window-dots"><i /><i /><i /></div><span>Gymvexa · Panel del dueño</span><div className="window-status"><span /> En tiempo real</div></div>
+              <div className="window-image"><Image src="/clasico/principal.webp" alt="Panel principal de Gymvexa con accesos, pagos, fiados y caja del día" width={1920} height={1035} priority /></div>
+            </div>
+            <div className="floating-card floating-access"><span className="floating-icon"><ClipboardList /></span><div><strong>3 fiados activos</strong><small>Con tope y sin olvidos</small></div><Check /></div>
+            <div className="floating-card floating-update"><span className="floating-icon"><CircleDollarSign /></span><div><strong>$0 diferencia en caja</strong><small>Turno conciliado</small></div></div>
           </div>
-          <div className="floating-card floating-access"><span className="floating-icon"><ClipboardList /></span><div><strong>3 fiados activos</strong><small>Con tope y sin olvidos</small></div><Check /></div>
-          <div className="floating-card floating-update"><span className="floating-icon"><CircleDollarSign /></span><div><strong>$0 diferencia en caja</strong><small>Turno conciliado</small></div></div>
         </div>
       </section>
 
@@ -125,7 +129,7 @@ export default function Clasico() {
         </div>
       </section>
 
-      <section className="content-section cl-split">
+      <section className="content-section cl-split cl-operation">
         <div className="cl-split-media"><Image src="/clasico/operacion.webp" alt="Mostrador y app de socios de Gymvexa trabajando en tiempo real" width={1400} height={900} /></div>
         <div className="cl-split-copy">
           <span className="section-kicker">OPERACIÓN AUTOMÁTICA</span>
@@ -141,7 +145,7 @@ export default function Clasico() {
         </div>
       </section>
 
-      <section className="content-section cl-split is-reverse">
+      <section className="content-section cl-split cl-money is-reverse">
         <div className="cl-split-media"><Image src="/clasico/dinero.webp" alt="Cierre de caja por turno en Gymvexa" width={1400} height={900} /></div>
         <div className="cl-split-copy">
           <span className="section-kicker">DINERO Y CAJA</span>
@@ -158,7 +162,7 @@ export default function Clasico() {
         </div>
       </section>
 
-      <section className="content-section cl-split">
+      <section className="content-section cl-split cl-views-section">
         <div className="cl-split-media"><Image src="/clasico/vistas.webp" alt="Las vistas de Gymvexa: panel del dueño, mostrador y app de miembros" width={1400} height={900} /></div>
         <div className="cl-split-copy">
           <span className="section-kicker">VISTAS DEL SISTEMA</span>
@@ -172,7 +176,7 @@ export default function Clasico() {
 
       <section className="content-section protection-section"><div className="protection-card"><div className="protection-icon"><LockKeyhole /></div><span className="section-kicker">SEGURIDAD</span><h2>Control sin confianza ciega.</h2><p>Gymvexa registra quién hizo cada acción importante: quién activó una membresía, registró un pago, modificó inventario, perdonó una deuda o cerró caja. Cada acción sensible deja evidencia.</p><div className="security-tags"><span><Users /> Permisos por rol</span><span><History /> Bitácora de acciones</span><span><KeyRound /> Zona privada con PIN</span><span><Fingerprint /> Accesos que no se borran</span><span><ShieldCheck /> Cancelaciones con folio</span></div></div></section>
 
-      <section id="como" className="content-section">
+      <section id="como" className="content-section cl-how">
         <div className="section-heading"><div><span className="section-kicker">EMPIEZA EN MINUTOS</span><h2>Empieza gratis.<br />Activa cuando estés listo.</h2></div><p>Crea tu cuenta, explora el panel y activa Gymvexa cuando quieras operar tu gimnasio en serio.</p></div>
         <div className="cl-steps">
           {steps.map(([title, copy], i) => <article key={title} className="cl-step"><span className="cl-step-num">{i + 1}</span><h3>{title}</h3><p>{copy}</p></article>)}
@@ -193,7 +197,7 @@ export default function Clasico() {
         </div>
       </section>
 
-      <section id="testimonios" className="content-section">
+      <section id="testimonios" className="content-section cl-testimonials">
         <div className="section-heading"><div><span className="section-kicker">TESTIMONIOS</span><h2>Dueños reales. Problemas reales.<br />Control real.</h2></div><p>Gimnasios que ya recuperaron control de caja, accesos, ventas y socios con Gymvexa.</p></div>
         <div className="cl-shots">
           {reviews.map((slug) => <figure key={slug} className="cl-shot"><Image src={`/clasico/rev-${slug}.webp`} alt={`Reseña de un gimnasio usando Gymvexa`} width={720} height={480} /></figure>)}
@@ -213,9 +217,9 @@ export default function Clasico() {
         </Accordion>
       </section>
 
-      <section id="contacto" className="final-cta-section"><div className="final-glow" /><Image src="/gymvexa-icon.svg" alt="" width={58} height={58} /><span className="section-kicker light">TU GIMNASIO, BAJO CONTROL</span><h2>Toma el control de tu gimnasio.</h2><p>Crea tu cuenta gratis y mira por dentro cómo Gymvexa ordena tus accesos, cobros, socios, caja y ventas desde un solo lugar.</p><div><a href={registerUrl} className="primary-cta inverse">Comenzar gratis <ArrowRight /></a><a href={waStart} className="text-cta">Hablar con ventas</a></div><small>Sin tarjeta para empezar · Soporte en español · Tehuacán, Puebla, MX</small></section>
+      <section id="contacto" className="final-cta-section"><div className="final-glow" /><Image src="/gymvexa-mark-transparent.png" alt="" width={100} height={92} /><span className="section-kicker light">TU GIMNASIO, BAJO CONTROL</span><h2>Toma el control de tu gimnasio.</h2><p>Crea tu cuenta gratis y mira por dentro cómo Gymvexa ordena tus accesos, cobros, socios, caja y ventas desde un solo lugar.</p><div><a href={registerUrl} className="primary-cta inverse">Comenzar gratis <ArrowRight /></a><a href={waStart} className="text-cta">Hablar con ventas</a></div><small>Sin tarjeta para empezar · Soporte en español · Tehuacán, Puebla, MX</small></section>
 
-      <footer><a href="#inicio" className="brand footer-brand"><span className="brand-mark"><Image src="/gymvexa-icon.svg" alt="" width={34} height={34} /></span><span className="brand-name">Gym<span>vexa</span></span></a><p>Gymvexa automatiza accesos, cobros, caja, socios y productos para gimnasios reales.</p><div><a href="#funciones">Funciones</a><a href="#como">Cómo funciona</a><a href="#incluye">Qué incluye</a><a href="#preguntas">Preguntas</a><a href={loginUrl}>Acceso</a></div><small>© 2026 Gymvexa. Todos los derechos reservados.</small></footer>
+      <footer><a href="#inicio" className="brand footer-brand brand-premium"><span className="brand-emblem"><Image src="/gymvexa-mark-transparent.png" alt="" width={48} height={44} /></span><span className="brand-wordmark">GYMVEXA</span></a><p>Gymvexa automatiza accesos, cobros, caja, socios y productos para gimnasios reales.</p><div><a href="#funciones">Funciones</a><a href="#como">Cómo funciona</a><a href="#incluye">Qué incluye</a><a href="#preguntas">Preguntas</a><a href={loginUrl}>Acceso</a></div><small>© 2026 Gymvexa. Todos los derechos reservados.</small></footer>
     </main>
   );
 }
