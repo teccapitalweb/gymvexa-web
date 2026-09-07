@@ -72,7 +72,7 @@ export default function Home() {
             <p className="hero-lead">Gymvexa reúne socios, accesos, membresías, caja e inventario en un programa rápido, elegante y preparado para trabajar en recepción.</p>
             <div className="hero-actions">
               <a href={downloadUrl} className="primary-cta"><CloudDownload /> Descargar para Windows</a>
-              <a href={registerUrl} className="secondary-cta">Comenzar 14 días gratis <ArrowRight /></a>
+              <a href={registerUrl} className="secondary-cta">Comenzar 30 días gratis <ArrowRight /></a>
             </div>
             <p className="download-note">Versión piloto 0.1.0 · Windows 10 y 11 · Instalador completo</p>
             <div className="trust-row">
